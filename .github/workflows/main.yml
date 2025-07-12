@@ -30,6 +30,10 @@ jobs:
       run: |
         VERSION=v$(date +"%Y%m%d%H%M%S")
         echo "VERSION=$VERSION" >> $GITHUB_ENV
+    
+    - name: List context contents
+      run: ls -lah
+
 
     # Build the Docker Image
     - name: Build Docker Image
